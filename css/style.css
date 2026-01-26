@@ -1,0 +1,468 @@
+@import url(./fonts.css);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', 'Oxygen', sans-serif;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    background: #c3bdb0;
+}
+
+.container {
+    max-width: 1140px;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.header {
+    background: #212121;
+    padding: 20px 0;
+}
+
+.header__nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.header__nav-list {
+    display: flex;
+    align-items: center;
+    gap: 120px;
+}
+
+.header__nav-list_item-link {
+    font-family: "Oxygen", sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    color: #f0f0f0;
+    transition: 0.3s;
+    display: inline-block;
+}
+
+.header__nav-list_item-link:hover {
+    color: #c3bdb0;
+    transform: scale(1.2);
+}
+
+.header__nav-icons {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+.icon__hover path {
+    transition: 0.3s;
+}
+
+.icon__hover:hover path {
+    fill: #f0f0f0;
+
+}
+
+.header__nav-icons_item-link {
+    transition: 0.3s;
+    display: inline-block;
+}
+
+.header__nav-icons_item-link:hover {
+    transform: scale(1.2);
+}
+
+.counter {
+    position: relative;
+    font-family: "Oxygen", sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    color: #c3bdb0;
+}
+
+
+.counter__item {
+    position: absolute;
+    top: -2px;
+    right: -2px;
+    width: 18px;
+    height: 18px;
+    background: #A22B4D;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.banner {
+    height: 90svh;
+    background: url(../img/bg.png) no-repeat center /cover;
+}
+
+
+.banner__wrap {
+    display: flex;
+    align-items: center;
+}
+
+
+.banner__content {
+    max-width: 920px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+}
+
+
+
+.banner__content-title {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 120%;
+    text-transform: uppercase;
+    color: #f0f0f0;
+}
+
+.banner__content-btns {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.banner__btn {
+    outline: none;
+    background: transparent;
+    border: 2px solid #c3bdb0;
+    max-width: 255px;
+    width: 100%;
+    color: #f0f0f0;
+    font-family: "Oxygen", sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    text-transform: uppercase;
+    padding: 30px;
+    backdrop-filter: blur(15px);
+    transition: 0.3s;
+}
+
+.banner__btn:hover {
+    background: #212121;
+}
+
+.products {
+    padding: 140px 0 180px;
+    position: relative;
+}
+
+.products__nav {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 1110px;
+    width: 100%;
+    height: 120px;
+    background: #DEDAD1;
+    box-shadow: 0px 2px 12px 2px #00000040;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 124px;
+}
+
+.products__nav-item {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: #7c7c7c;
+    transition: 0.3s;
+    position: relative;
+}
+
+.products__nav-item:hover {
+    color: #212121;
+}
+
+.products__nav-item::after {
+    content: "";
+    width: 3px;
+    height: 38px;
+    background: #212121;
+    position: absolute;
+    top: 50%;
+    right: -62px;
+    transform: translateY(-50%);
+}
+
+.products__nav-item:last-child::after {
+    content: none;
+}
+
+.products__card {
+    max-width: 350px;
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    align-items: center;
+    background: #DEDAD1;
+    border: 1px solid #212121;
+    padding: 100px 20px 20px;
+    overflow: hidden;
+}
+
+.favorite {
+    position: absolute;
+    top: 26px;
+    left: 24px;
+}
+
+.favorite__hover path {
+    fill: transparent;
+    transition: 0.3s;
+}
+
+.favorite__hover:hover path {
+    fill: #212121;
+}
+
+.discount {
+    position: absolute;
+    right: -50px;
+    top: 17px;
+    width: 186px;
+    height: 52px;
+    background: #212121;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: rotate(45deg);
+}
+
+.discount__persentage {
+    font-family: "Oxygen", sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    color: #F0F0F0;
+    transform: rotate(-50deg);
+}
+
+.products__card-img {
+    width: 242px;
+    height: 262px;
+}
+
+.products__card-img img {
+    width: 100%;
+    height: 100%;
+}
+
+.products__card-desc {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    width: 100%;
+}
+
+.products__card-desc_info {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+    align-items: flex-start;
+}
+
+.products__card-desc_info-name {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    color: #313131;
+    text-transform: uppercase;
+}
+
+.products__card-desc_info-collection {
+    font-family: "Oxygen", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #939393;
+}
+
+.products__card-desc_add {
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.products__card-desc_add-price {
+    font-family: "Oxygen", sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    color: #212121;
+}
+
+.products__card-desc_add-btn {
+    width: 158px;
+    height: 52px;
+    border: 2px solid #212121;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Oxygen", sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: #212121;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.products__card-desc_add-btn:hover {
+    background: #212121;
+    color: #c3bdb0;
+}
+
+.products__wrap {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.about {
+    margin-bottom: 180px;
+}
+
+.about__wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 95px;
+}
+
+.about__desc {
+    display: flex;
+    flex-direction: column;
+    gap: 44px;
+}
+
+.about__desc-title {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 120%;
+    text-transform: uppercase;
+    color: #212121;
+    max-width: 890px;
+    width: 100%;
+}
+
+.about__desc-text {
+    font-family: "Oxygen", sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 120%;
+    color: #212121;
+}
+
+.about__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    grid-auto-rows: 314px;
+}
+
+.about__img {
+    width: 100%;
+    height: 100%;
+}
+
+.about__img img {
+    width: 100%;
+    height: 100%;
+}
+
+.about__img:first-child {
+    grid-row: span 2;
+}
+
+.footer {
+    padding: 80px 0 166px;
+    background: #141510;
+    height: 623px;
+    height: 100%;
+}
+.footer__wrap{
+    margin: 0 405px;
+}
+
+.footer__form {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+.footer__form-title {
+    font-family: "Oxygen", sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    color: #F0F0F0;
+    text-transform: uppercase;
+}
+
+.footer__form-input {
+    padding: 25px 90px 25px 20px;
+    width: 100%;
+    background: #20211b;
+    border: 1px solid #DEDAD1;
+}
+
+.footer__form-label {
+    position: relative;
+    max-width: 545px;
+    width: 100%;
+}
+
+.footer__form-btn {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+}
+
+.footer__lists {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 140px 405px 166px 405px;
+    max-width: 1140px;
+    width: 100%;
+}
+
+.footer__list-title {
+    font-family: "Oxygen", sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    color: #DEDAD1;
+    margin-bottom: 20px;
+}
+
+.list__item-link {
+    font-family: "Oxygen", sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    color: #DEDAD1;
+    opacity: 50%;
+    gap: 12px;
+}
